@@ -6,8 +6,8 @@ let mouseX = -1000;
 let mouseY = -1000;
 
 // Configuration
-const GRID_SIZE = 40; // Size of the squares
-const FADE_SPEED = 0.03; // How fast the trail fades
+const GRID_SIZE = 20; // Size of the squares
+const FADE_SPEED = 0.01; // How fast the trail fades
 const HOVER_RADIUS = 100; // Radius of the mouse effect
 
 // Store the state of every square in the grid
