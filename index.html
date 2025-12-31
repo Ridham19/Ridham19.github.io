@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridham Kevat | ECE Portfolio</title>
+    <title>Ridham Kevat | VLSI & SDE Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
         <div class="hero-content">
             <p class="greeting">Hello, I am</p>
             <h1>Ridham Kevat</h1>
-            <h2 class="typing-effect">Electronics & Communication Engineer</h2>
-            <p class="bio">Passionate about Digital Logic, VLSI Architecture, and Signal Processing.</p>
+            <h2 class="typing-effect">Hardware Design & Software Engineering</h2>
+            <p class="bio">Building efficient systems from the transistor level to the application layer. Focused on VLSI Architecture, Embedded Systems, and Scalable Software.</p>
             <div class="social-links">
                 <a href="https://github.com/Ridham19" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ridham-kevat" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/ridham-kevat-ba28782b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:ridhamkevat19@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <p class="cgpa">CGPA: <span class="accent">8.1/10.0</span> (till 4th sem)</p>
                 <div class="coursework">
                     <h4>Relevant Coursework:</h4>
-                    <p>Digital Logic Design, Microprocessors, Computer Architecture, Digital Integrated Circuits, DSP, Control Systems, Network Analysis.</p>
+                    <p>Digital Logic Design, Computer Architecture, Data Structures (Implied), Microprocessors, DSP, Control Systems, Network Analysis.</p>
                 </div>
             </div>
 
@@ -69,36 +69,49 @@
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">02. Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-microchip"></i> Hardware Design</h3>
-                    <ul>
-                        <li>Verilog HDL & VHDL</li>
-                        <li>SystemVerilog (Basic)</li>
-                        <li>FSM Design</li>
-                        <li>CMOS VLSI</li>
-                        <li>Computer Architecture</li>
-                    </ul>
+            
+            <div class="skills-wrapper">
+                
+                <div class="skill-box">
+                    <h3><i class="fas fa-microchip"></i> Core Electronics & VLSI</h3>
+                    <div class="skill-tags">
+                        <span class="tech-tag">Verilog HDL</span>
+                        <span class="tech-tag">VHDL</span>
+                        <span class="tech-tag">SystemVerilog</span>
+                        <span class="tech-tag">CMOS VLSI</span>
+                        <span class="tech-tag">Computer Architecture</span>
+                        <span class="tech-tag">FSM Design</span>
+                        <span class="tech-tag">Digital Signal Processing</span>
+                        <span class="tech-tag">Control Systems</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <ul>
-                        <li>Python (Intermediate)</li>
-                        <li>C/C++ (Basic)</li>
-                        <li>MATLAB</li>
-                        <li>Numpy & Scipy</li>
-                        <li>Matplotlib</li>
-                    </ul>
+
+                <div class="skill-box">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C / C++</span>
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">SPICE</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <ul>
-                        <li>Xilinx Vivado</li>
-                        <li>ModelSim</li>
-                        <li>Git / GitHub</li>
-                        <li>Digital Signal Processing</li>
-                    </ul>
+
+                <div class="skill-box">
+                    <h3><i class="fas fa-tools"></i> Tools & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="tech-tag">Xilinx Vivado</span>
+                        <span class="tech-tag">ModelSim</span>
+                        <span class="tech-tag">Git / GitHub</span>
+                        <span class="tech-tag">KiCad</span>
+                        <span class="tech-tag">ngspice</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">SciPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -109,24 +122,39 @@
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <div class="folder-icon"><i class="far fa-folder"></i></div>
-                    <h3>Smart Car Parking System</h3>
-                    <p class="tech-stack">Verilog | FSM | Digital Logic</p>
-                    <p class="description">Engineered a robust Finite State Machine (FSM) to control a car parking system, handling sensor inputs for entry/exit gates. Optimized Verilog code for FPGA synthesis and sequential logic management.</p>
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Smart Parking">
+                    <div class="project-info">
+                        <h3>Smart Car Parking System</h3>
+                        <p class="tech-stack">Verilog | FSM | Digital Logic</p>
+                        <p class="description">Engineered a robust Finite State Machine (FSM) to control a car parking system, handling sensor inputs for entry/exit gates and occupancy tracking.</p>
+                        <a href="https://github.com/Ridham19/FSM-for-car-parking" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="folder-icon"><i class="far fa-folder"></i></div>
-                    <h3>8-bit 16-Instruction CPU</h3>
-                    <p class="tech-stack">Verilog | Computer Architecture</p>
-                    <p class="description">Designed a custom 8-bit CPU from scratch. Implemented a complete ISA with 16 instructions, Datapath, and Control Unit (ALU, Reg File, PC). Verified via comprehensive Testbenches.</p>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="CPU Design">
+                    <div class="project-info">
+                        <h3>8-bit 16-Instruction CPU</h3>
+                        <p class="tech-stack">Verilog | Computer Architecture</p>
+                        <p class="description">Designed a custom 8-bit CPU architecture from scratch. Implemented a complete ISA with 16 instructions, Datapath, and Control Unit.</p>
+                        <a href="https://github.com/Ridham19/8-bit-CPU" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="folder-icon"><i class="far fa-folder"></i></div>
-                    <h3>Fourier Series Visualizer</h3>
-                    <p class="tech-stack">Python | Signal Processing</p>
-                    <p class="description">Developed a GUI-based application using scipy.integrate and matplotlib to visualize Fourier Series approximations for user-defined signals with dynamic waveform plotting.</p>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Signal Processing">
+                    <div class="project-info">
+                        <h3>Fourier Series Visualizer</h3>
+                        <p class="tech-stack">Python | Signal Processing</p>
+                        <p class="description">Developed a GUI-based application using scipy.integrate and matplotlib to visualize Fourier Series approximations for user-defined signals.</p>
+                        <a href="https://github.com/Ridham19/Fourier" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -147,7 +175,7 @@
     <section id="contact" class="section">
         <div class="container text-center">
             <h2 class="section-title">05. Get In Touch</h2>
-            <p>I am currently looking for internship opportunities in VLSI and Embedded Systems.</p>
+            <p>I am currently looking for internship opportunities in <br> <span class="accent">VLSI Design</span>, <span class="accent">Embedded Systems</span>, and <span class="accent">Software Engineering</span>.</p>
             <a href="mailto:ridhamkevat19@gmail.com" class="btn">Say Hello</a>
             <p class="footer-email">u23ec121@eced.svnit.ac.in</p>
         </div>
