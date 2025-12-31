@@ -288,3 +288,112 @@ nav, header, section, footer, .container {
 .hero, .section {
     background: transparent; 
 }
+
+/* --- RGB Glow Animation --- */
+@keyframes rgb-glow {
+    0% {
+        border-color: #64ffda; /* Cyan */
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.6);
+    }
+    33% {
+        border-color: #bd34fe; /* Neon Purple */
+        box-shadow: 0 0 15px rgba(189, 52, 254, 0.6);
+    }
+    66% {
+        border-color: #ff2079; /* Neon Pink */
+        box-shadow: 0 0 15px rgba(255, 32, 121, 0.6);
+    }
+    100% {
+        border-color: #64ffda; /* Back to Cyan */
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.6);
+    }
+}
+
+/* Apply invisible border first to prevent jumping */
+.education-card, .skill-box, .project-card {
+    border: 2px solid transparent; /* Invisible placeholder */
+    transition: transform 0.3s ease; /* Keep the smooth lift */
+}
+
+/* On Hover: Trigger the RGB Animation */
+.education-card:hover, 
+.skill-box:hover, 
+.project-card:hover {
+    animation: rgb-glow 2s linear infinite; /* Cycles colors every 2 seconds */
+    transform: translateY(-7px); /* Slight lift */
+}
+
+/* --- ELECTRIC BORDER EFFECT --- */
+
+/* 1. Reset standard border */
+.education-card, .skill-box, .project-card {
+    position: relative;
+    background: var(--card-bg); /* Dark Blue background */
+    border-radius: 8px;
+    border: none; /* No standard border */
+    overflow: hidden; /* Keeps the light inside rounded corners */
+    z-index: 1; /* Sits above the spinning light */
+}
+
+/* 2. Create the Spinning Beam (Hidden by default) */
+.education-card::before, .skill-box::before, .project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    
+    /* The "Beam" - Transparent to Cyan Gradient */
+    background: conic-gradient(
+        transparent, 
+        transparent, 
+        transparent, 
+        #64ffda
+    );
+    
+    /* Spin Animation */
+    animation: rotate 4s linear infinite;
+    opacity: 0; /* Hidden until hover */
+    transition: opacity 0.3s ease;
+    z-index: -2; /* Behind everything */
+}
+
+/* 3. The Inner Background (To hide the center of the beam) */
+.education-card::after, .skill-box::after, .project-card::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* This 2px gap creates the border thickness! */
+    background: var(--card-bg); /* Same color as card to blend in */
+    border-radius: 6px;
+    z-index: -1; /* Behind text, but in front of beam */
+}
+
+/* 4. On Hover: Show the beam */
+.education-card:hover::before, 
+.skill-box:hover::before, 
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* The Rotation Animation */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fix for Images inside Project Cards */
+/* Images need to sit above the ::after background */
+.project-card img {
+    position: relative; 
+    z-index: 2; 
+}
+
+/* Ensure text is always clickable */
+.education-card h3, .education-card p,
+.skill-box h3, .skill-box .skill-tags,
+.project-card h3, .project-card p, .project-card a {
+    position: relative;
+    z-index: 5;
+}
+
