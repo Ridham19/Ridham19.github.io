@@ -397,3 +397,34 @@ nav, header, section, footer, .container {
     z-index: 5;
 }
 
+/* --- Certification Links Styling --- */
+
+.cert-list li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.cert-link {
+    text-decoration: none;
+    color: var(--heading-color); /* White/Light Grey */
+    font-weight: 600;
+    border-bottom: 1px dashed var(--accent-color); /* Subtle Cyan Underline */
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.cert-link:hover {
+    color: var(--accent-color); /* Turns Cyan on hover */
+    border-bottom-style: solid;
+}
+
+.cert-link i {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    opacity: 0.7;
+}
+
+.cert-provider {
+    color: var(--text-color); /* Dimmer color for the institute name */
+    margin-left: 5px;
+}

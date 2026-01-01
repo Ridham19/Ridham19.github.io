@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Ridham Kevat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="chroma-canvas"></canvas>
+
+    <nav>
+        <div class="logo">&lt;Ridham /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" style="color: var(--accent-color);">All Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="height: 40vh; min-height: 300px;">
+        <div class="hero-content">
+            <h1>Project Archive</h1>
+            <p class="bio">A complete collection of my work in VLSI, Embedded Systems, and Software Engineering.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1562426509-5044a121aa49?auto=format&fit=crop&w=600&q=80" alt="Smart Parking">
+                    <div class="project-info">
+                        <h3>Smart Car Parking System</h3>
+                        <p class="tech-stack">Verilog | FSM | Digital Logic</p>
+                        <p class="description">Engineered a robust Finite State Machine (FSM) to control a car parking system, handling sensor inputs for entry/exit gates and occupancy tracking.</p>
+                        <a href="https://github.com/Ridham19/FSM-for-car-parking" target="_blank" class="project-link"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="CPU Design">
+                    <div class="project-info">
+                        <h3>8-bit 16-Instruction ALU</h3>
+                        <p class="tech-stack">Verilog | Computer Architecture</p>
+                        <p class="description">Designed a custom 8-bit ALU architecture from scratch. Implemented a complete ISA with 16 instructions and Datapath.</p>
+                        <a href="https://github.com/Ridham19/8b_ALU" target="_blank" class="project-link"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym App">
+                    <div class="project-info">
+                        <h3>Gym Reservation System</h3>
+                        <p class="tech-stack">Python | Flask | MongoDB</p>
+                        <p class="description">A full-stack web application for slot booking and management. Features user authentication and real-time database updates.</p>
+                        <a href="https://github.com/Ridham19" target="_blank" class="project-link"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Signal Processing">
+                    <div class="project-info">
+                        <h3>Fourier Series Visualizer</h3>
+                        <p class="tech-stack">Python | Scipy | Matplotlib</p>
+                        <p class="description">GUI-based application to visualize Fourier Series approximations. Calculates coefficients numerically and plots dynamic waveforms.</p>
+                        <a href="https://github.com/Ridham19/Fourier" target="_blank" class="project-link"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Management System">
+                    <div class="project-info">
+                        <h3>Management Information System</h3>
+                        <p class="tech-stack">Python | Data Management | Automation</p>
+                        <p class="description">Developed a Python-based MIS to automate data entry, storage, and retrieval processes. Implemented algorithms for record management and reporting.</p>
+                        <a href="https://github.com/Ridham19/python_mis" target="_blank" class="project-link"><i class="fab fa-github"></i> View Source</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=600&q=80" alt="PCB Design">
+                    <div class="project-info">
+                        <h3>Precision Servo(PWM) Controller</h3>
+                        <p class="tech-stack">KiCad | IC 555 Timer | Analog Design</p>
+                        <p class="description">Designed a custom PCB for controlling SG90 servo motors using an IC 555 timer in astable mode. Generated precise PWM signals for accurate angular positioning.</p>
+                        <a href="https://www.linkedin.com/in/ridham-kevat-ba28782b9/overlay/1761554508816/single-media-viewer/?profileId=ACoAAEx7I6oBwTtiPCTrpS96gU2_XLe6YPhU5xM" target="_blank" class="project-link">
+                            <i class="fab fa-linkedin"></i> View Project Post
+                        </a>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built by Ridham Kevat &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
