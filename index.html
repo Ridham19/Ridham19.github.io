@@ -9,9 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<canvas id="chroma-canvas"></canvas>
+
+    <canvas id="chroma-canvas"></canvas>
+
     <nav>
-        <div class="logo">&lt;Ridham /&gt;</div>
+        <div class="logo">&lt;Ridham/&gt;</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -21,7 +23,7 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
+        <div class="hero-content hidden">
             <p class="greeting">Hello, I am</p>
             <h1>Ridham Kevat</h1>
             <h2 class="typing-effect">Hardware Design & Software Engineering</h2>
@@ -36,9 +38,9 @@
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">01. Education</h2>
+            <h2 class="section-title hidden">01. Education</h2>
             
-            <div class="card education-card">
+            <div class="card education-card hidden">
                 <h3>Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat</h3>
                 <p class="degree">B.Tech, Electronics and Communication Engineering</p>
                 <p class="date">2023 – 2027</p>
@@ -49,14 +51,14 @@
                 </div>
             </div>
 
-            <div class="card education-card">
+            <div class="card education-card hidden">
                 <h3>M.B. Vamdot High School, Bardoli</h3>
                 <p class="degree">Higher Secondary Certificate (12th Grade)</p>
                 <p class="cgpa">Percentage: <span class="accent">84.46%</span> (549/650)</p>
                 <p class="cgpa">Percentile Rank: <span class="accent">99.00</span></p>
             </div>
 
-            <div class="card education-card">
+            <div class="card education-card hidden">
                 <h3>B.A.B.S. High School, Bardoli</h3>
                 <p class="degree">Secondary School Certificate (10th Grade)</p>
                 <p class="cgpa">Percentage: <span class="accent">93.33%</span> (560/600)</p>
@@ -68,9 +70,9 @@
 
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">02. Technical Skills</h2>
+            <h2 class="section-title hidden">02. Technical Skills</h2>
             
-            <div class="skills-wrapper">
+            <div class="skills-wrapper hidden">
                 
                 <div class="skill-box">
                     <h3><i class="fas fa-microchip"></i> Core Electronics & VLSI</h3>
@@ -90,11 +92,14 @@
                     <h3><i class="fas fa-code"></i> Programming Languages</h3>
                     <div class="skill-tags">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">C / C++</span>
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">C++</span>
                         <span class="tech-tag">MATLAB</span>
                         <span class="tech-tag">SPICE</span>
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">ARM assembly</span>
                     </div>
                 </div>
 
@@ -102,10 +107,10 @@
                     <h3><i class="fas fa-tools"></i> Tools & Libraries</h3>
                     <div class="skill-tags">
                         <span class="tech-tag">Xilinx Vivado</span>
-                        <span class="tech-tag">ModelSim</span>
                         <span class="tech-tag">Git / GitHub</span>
                         <span class="tech-tag">KiCad</span>
                         <span class="tech-tag">ngspice</span>
+                        <span class="tech-tag">LTspice</span>
                         <span class="tech-tag">NumPy</span>
                         <span class="tech-tag">SciPy</span>
                         <span class="tech-tag">Matplotlib</span>
@@ -118,10 +123,10 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">03. Key Projects</h2>
+            <h2 class="section-title hidden">03. Key Projects</h2>
             <div class="projects-grid">
                 
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Smart Parking">
                     <div class="project-info">
                         <h3>Smart Car Parking System on FPGA board</h3>
@@ -133,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="CPU Design">
                     <div class="project-info">
                         <h3>8-bit 16-Instruction ALU</h3>
@@ -145,7 +150,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Signal Processing">
                     <div class="project-info">
                         <h3>Fourier Series Visualizer</h3>
@@ -158,18 +163,19 @@
                 </div>
 
             </div>
-            </div> <div style="text-align: center; margin-top: 50px;">
-                <a href="projects.html" class="btn">
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projects.html" class="btn hidden">
                     View Full Project Archive <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
                 </a>
             </div>
-            </div> </section>
+
         </div>
     </section>
 
     <section id="certs" class="section">
         <div class="container">
-            <h2 class="section-title">04. Certifications</h2>
+            <h2 class="section-title hidden">04. Certifications</h2>
             <ul class="cert-list">
                 
                 <li>
@@ -201,7 +207,7 @@
     </section>
 
     <section id="contact" class="section">
-        <div class="container text-center">
+        <div class="container text-center hidden">
             <h2 class="section-title">05. Get In Touch</h2>
             <p>I am currently looking for internship opportunities in <br> <span class="accent">VLSI Design</span>, <span class="accent">Embedded Systems</span>, and <span class="accent">Software Engineering</span>.</p>
             <a href="mailto:ridhamkevat19@gmail.com" class="btn">Say Hello</a>
@@ -212,6 +218,7 @@
     <footer>
         <p>Built by Ridham Kevat &copy; 2025</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
