@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="bg-image"></div>
 
     <canvas id="chroma-canvas"></canvas>
 
@@ -126,40 +126,52 @@
         <div class="container">
             <h2 class="section-title hidden">03. Key Projects</h2>
             <div class="projects-grid">
-                
+    
                 <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Smart Parking">
-                    <div class="project-info">
+                    <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
                         <h3>Smart Car Parking System on FPGA board</h3>
                         <p class="tech-stack">Verilog | FSM | Digital Logic</p>
                         <p class="description">Engineered a robust Finite State Machine (FSM) to control a car parking system, handling sensor inputs for entry/exit gates and occupancy tracking.</p>
-                        <a href="https://github.com/Ridham19/FSM-for-car-parking" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Source Code
-                        </a>
+                        
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/Ridham19/FSM-for-car-parking" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="CPU Design">
-                    <div class="project-info">
+                    <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
                         <h3>8-bit 16-Instruction ALU</h3>
                         <p class="tech-stack">Verilog | Computer Architecture</p>
                         <p class="description">Designed a custom 8-bit ALU architecture from scratch. Implemented a complete ISA with 16 instructions and Datapath.</p>
-                        <a href="https://github.com/Ridham19/8b_ALU" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Source Code
-                        </a>
+                        
+                        <div style="margin-top: auto; padding-top: 15px;">
+                            <a href="https://github.com/Ridham19/8b_ALU" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card hidden">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Signal Processing">
-                    <div class="project-info">
-                        <h3>Fourier Series Visualizer</h3>
-                        <p class="tech-stack">Python | Signal Processing</p>
-                        <p class="description">Developed a GUI-based application using scipy.integrate and matplotlib to visualize Fourier Series approximations for user-defined signals.</p>
-                        <a href="https://github.com/Ridham19/Fourier" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Source Code
-                        </a>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="UNIMIS">
+                    <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
+                        <h3>UNIMIS</h3>
+                        <p class="tech-stack">Python | Data Management | Automation</p>
+                        <p class="description">Developed a Python-based MIS to automate data entry, storage, and retrieval processes. Implemented algorithms for record management and reporting.</p>
+                        
+                        <div style="margin-top: auto; padding-top: 15px; display: flex; gap: 15px; flex-wrap: wrap;">
+                            <a href="https://github.com/Ridham19/python_mis" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                            <a href="https://unimis.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
 

@@ -340,7 +340,8 @@ footer {
     height: 100%;
     z-index: -1 !important;
     pointer-events: none;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+    background-color: transparent;
 }
 
 header,
@@ -446,6 +447,19 @@ header,
 .project-card:nth-child(3),
 .skill-box:nth-child(3) {
     transition-delay: 0.2s;
+}
+#bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; 
+    background-image: url('wafer2.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; 
+    filter: grayscale(10%);
 }
 
 @media (max-width: 768px) {
