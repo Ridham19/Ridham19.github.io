@@ -6,8 +6,10 @@
     --card-bg: #112240;
     --font-main: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+    --transition: 0.3s ease;
 }
 
+/* --- Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -19,18 +21,54 @@ body {
     color: var(--text-color);
     font-family: var(--font-main);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
 ul {
     list-style: none;
 }
 
+/* --- Layout --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10 !important;
+}
+
+.section {
+    padding: 80px 0;
+    background: transparent;
+    position: relative;
+    z-index: 10 !important;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    color: var(--heading-color);
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    margin-left: 20px;
+    background: #233554;
+}
+
+/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -55,76 +93,44 @@ nav {
 }
 
 .nav-links a {
+    color: var(--heading-color);
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    color: var(--heading-color);
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10 !important;
-}
-
-.section {
-    padding: 80px 0;
-    background: transparent;
-    position: relative;
-    z-index: 10 !important;
-}
-
-.section-title {
-    font-family: var(--font-mono);
-    color: var(--heading-color);
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-}
-
-.section-title::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: #233554;
-    margin-left: 20px;
-}
-
+/* --- Hero --- */
 .hero {
-    height: 90vh;
     display: flex;
     align-items: center;
-    padding: 0 50px;
     max-width: 1200px;
+    height: 90vh;
     margin: 0 auto;
+    padding: 0 50px;
     background: transparent;
     position: relative;
     z-index: 10 !important;
-}
-
-.greeting {
-    color: var(--accent-color);
-    font-family: var(--font-mono);
-    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 4rem;
     color: var(--heading-color);
+    font-size: 4rem;
     line-height: 1.1;
 }
 
 .hero h2 {
-    font-size: 3rem;
-    color: var(--text-color);
     margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+.greeting {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
 }
 
 .bio {
@@ -133,9 +139,9 @@ nav {
 }
 
 .social-links a {
-    font-size: 1.5rem;
     margin-right: 20px;
     color: var(--heading-color);
+    font-size: 1.5rem;
 }
 
 .social-links a:hover {
@@ -143,18 +149,17 @@ nav {
     transform: translateY(-3px);
 }
 
+/* --- Cards & Components --- */
 .education-card,
-.skill-category,
-.project-card,
-.skill-box {
-    background-color: var(--card-bg);
-    padding: 25px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+.skill-box,
+.project-card {
     position: relative;
-    border: none;
-    overflow: hidden;
     z-index: 1;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    transition: transform var(--transition);
+    overflow: hidden;
 }
 
 .education-card:hover,
@@ -163,19 +168,24 @@ nav {
     transform: translateY(-5px);
 }
 
+.education-card h3,
+.skill-box h3,
+.project-card h3 {
+    position: relative;
+    z-index: 5;
+    color: var(--heading-color);
+}
+
+/* --- Education --- */
 .education-card {
     margin-bottom: 20px;
 }
 
-.education-card h3 {
-    color: var(--heading-color);
-}
-
 .education-card .degree {
+    margin-top: 5px;
     color: var(--accent-color);
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    margin-top: 5px;
 }
 
 .education-card .cgpa {
@@ -185,13 +195,14 @@ nav {
 
 .coursework {
     margin-top: 15px;
-    font-size: 0.9rem;
-    border-top: 1px solid #233554;
     padding-top: 15px;
+    border-top: 1px solid #233554;
+    font-size: 0.9rem;
 }
 
-.skills-grid,
-.skills-wrapper {
+/* --- Skills --- */
+.skills-wrapper,
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -202,12 +213,11 @@ nav {
 }
 
 .skill-box h3 {
-    color: var(--heading-color);
-    margin-bottom: 20px;
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 .skill-box h3 i {
@@ -221,14 +231,14 @@ nav {
 }
 
 .tech-tag {
+    padding: 8px 15px;
+    color: var(--accent-color);
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    color: var(--accent-color);
     border: 1px solid var(--accent-color);
-    padding: 8px 15px;
     border-radius: 4px;
-    transition: all 0.2s ease;
     cursor: default;
+    transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
@@ -236,12 +246,7 @@ nav {
     box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
+/* --- Projects --- */
 .project-card {
     display: flex;
     flex-direction: column;
@@ -249,113 +254,103 @@ nav {
     height: 100%;
 }
 
-.project-card .folder-icon {
-    color: var(--accent-color);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.project-card h3 {
-    color: var(--heading-color);
-    margin-bottom: 10px;
-}
-
-.project-card .tech-stack {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-}
-
 .project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    border-bottom: 2px solid var(--accent-color);
     position: relative;
     z-index: 2;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+    border-bottom: 2px solid var(--accent-color);
+    opacity: 0.8;
+    transition: opacity var(--transition);
+    
 }
 
 .project-card:hover img {
     opacity: 1;
 }
 
+.project-card .tech-stack {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+}
+
 .project-link {
     display: inline-block;
-    margin-top: 15px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--accent-color);
-    text-decoration: underline;
     position: relative;
     z-index: 5;
+    margin-top: 15px;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-decoration: underline;
 }
 
 .project-link:hover {
     color: var(--heading-color);
 }
 
-.text-center {
-    text-align: center;
+/* --- Certifications --- */
+.cert-list li {
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border: 1px solid var(--accent-color);
+.cert-link {
+    padding-bottom: 2px;
+    color: var(--heading-color);
+    font-weight: 600;
+    border-bottom: 1px dashed var(--accent-color);
+}
+
+.cert-link:hover {
     color: var(--accent-color);
-    border-radius: 4px;
-    font-family: var(--font-mono);
-    margin-top: 30px;
+    border-bottom-style: solid;
 }
 
-.btn:hover {
-    background: rgba(100, 255, 218, 0.1);
-}
-
-.footer-email {
-    margin-top: 20px;
-    font-family: var(--font-mono);
+.cert-link i {
+    margin-left: 8px;
     font-size: 0.8rem;
+    opacity: 0.7;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    position: relative;
-    z-index: 10 !important;
+.cert-provider {
+    margin-left: 5px;
+    color: var(--text-color);
+}
+
+/* --- Visual Effects (Canvas, Background, Borders) --- */
+#bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-image: url('wafer2.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    filter: grayscale(10%);
 }
 
 #chroma-canvas {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1 !important;
     width: 100%;
     height: 100%;
-    z-index: -1 !important;
-    pointer-events: none;
-    /* background-color: var(--bg-color); */
     background-color: transparent;
+    pointer-events: none;
 }
 
-header,
-.education-card h3,
-.education-card p,
-.skill-box h3,
-.skill-box .skill-tags,
-.project-card h3,
-.project-card p,
-.project-card a {
-    position: relative;
-    z-index: 5;
-}
-
+/* Electric Border Animation */
 .education-card::before,
 .skill-box::before,
 .project-card::before {
@@ -363,13 +358,13 @@ header,
     position: absolute;
     top: -50%;
     left: -50%;
+    z-index: -2;
     width: 200%;
     height: 200%;
     background: conic-gradient(transparent, transparent, transparent, #64ffda);
     animation: rotate 4s linear infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: -2;
 }
 
 .education-card::after,
@@ -378,9 +373,9 @@ header,
     content: '';
     position: absolute;
     inset: 2px;
+    z-index: -1;
     background: var(--card-bg);
     border-radius: 6px;
-    z-index: -1;
 }
 
 .education-card:hover::before,
@@ -390,43 +385,26 @@ header,
 }
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.cert-list li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.cert-link {
-    text-decoration: none;
-    color: var(--heading-color);
-    font-weight: 600;
-    border-bottom: 1px dashed var(--accent-color);
-    padding-bottom: 2px;
-    transition: all 0.3s ease;
-}
-
-.cert-link:hover {
+/* --- Interaction Utilities --- */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
     color: var(--accent-color);
-    border-bottom-style: solid;
+    font-family: var(--font-mono);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
 }
 
-.cert-link i {
-    font-size: 0.8rem;
-    margin-left: 8px;
-    opacity: 0.7;
+.btn:hover {
+    background: rgba(100, 255, 218, 0.1);
 }
 
-.cert-provider {
-    color: var(--text-color);
-    margin-left: 5px;
-}
+.text-center { text-align: center; }
 
 .hidden {
     opacity: 0;
@@ -440,60 +418,50 @@ header,
 }
 
 .project-card:nth-child(2),
-.skill-box:nth-child(2) {
-    transition-delay: 0.1s;
-}
+.skill-box:nth-child(2) { transition-delay: 0.1s; }
 
 .project-card:nth-child(3),
-.skill-box:nth-child(3) {
-    transition-delay: 0.2s;
-}
-#bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2; 
-    background-image: url('wafer2.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15; 
-    filter: grayscale(10%);
+.skill-box:nth-child(3) { transition-delay: 0.2s; }
+
+/* --- Footer --- */
+footer {
+    position: relative;
+    z-index: 10 !important;
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-align: center;
 }
 
+.footer-email {
+    margin-top: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+/* --- Mobile Queries --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        font-size: 0.85rem;
-    }
-
     nav {
         flex-direction: column;
         padding: 15px;
         gap: 15px;
     }
 
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
     .hero {
+        height: auto;
         padding: 80px 20px;
         text-align: center;
-        height: auto;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-content {
-        align-items: center;
-    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .hero-content { align-items: center; }
 
     .skills-wrapper,
     .projects-grid {
